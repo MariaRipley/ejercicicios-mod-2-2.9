@@ -45,5 +45,28 @@ console.log(average(numbers2));
 
 // Ejercicio 3. Tenemos mucho en común
 
+const btn = document.querySelector('.js_btn');
+const favBookText = document.querySelector('.js_text');
+const favBook1Input = document.querySelector('.js_input1');
+const favBook2Input = document.querySelector('.js_input2');
+let book1 = '';
+let book2 = '';
+
+function handleClick(event) {
+    event.preventDefault();
+    book1 = favBook1Input.value;
+    book2 = favBook2Input.value;
+    const favBooks = [book1, book2];
+    for (const book of favBooks) {
+        favBookText.innerHTML += `¡A mí también me encantó ${book}! Tenemos mucho en común, humana. `;
+    }
+}
+
+btn.addEventListener('click', handleClick);
+
+
+
+
+
 
 
